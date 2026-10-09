@@ -1,4 +1,4 @@
-const Photo = require("../models/Photo");
+const { PhotoStore: Photo } = require("../models/store");
 const pinataService = require("../services/pinataService");
 
 // Helper to convert hex string to binary string
