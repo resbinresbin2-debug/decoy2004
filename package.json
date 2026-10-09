@@ -1,0 +1,20 @@
+{
+  "name": "photoproof-workspace",
+  "version": "1.0.0",
+  "description": "PhotoProof: Blockchain-Based Photo Ownership & Provenance App",
+  "private": true,
+  "workspaces": [
+    "contracts",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "contracts:compile": "npm run compile --workspace=contracts",
+    "contracts:test": "npm run test --workspace=contracts",
+    "contracts:deploy:sepolia": "npm run deploy:sepolia --workspace=contracts",
+    "server:dev": "npm run dev --workspace=server",
+    "server:start": "npm run start --workspace=server",
+    "client:dev": "npm run dev --workspace=client",
+    "client:build": "npm run build --workspace=client"
+  }
+}
