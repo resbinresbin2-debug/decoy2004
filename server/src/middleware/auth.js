@@ -18,7 +18,7 @@ const authMiddleware = async (req, res, next) => {
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET || "photoproof_jwt_super_secret_key");
-    const user = await User.findById(decoded.id).select("-password");
+    const user = await UserStore.findById(decoded.id).select("-password");
 
     if (!user) {
       return res.status(401).json({
